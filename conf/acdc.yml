@@ -1,0 +1,18 @@
+raw_path: /data/cwj/data/ACDC/training
+
+# generated
+meta_path: /data/cwj/data/ACDC/meta.pickle
+generated_path: /data/cwj/data/ACDC/gen
+# for train val test split
+train_meta_path: /data/cwj/data/ACDC/train_meta.pickle
+test_meta_path: /data/cwj/data/ACDC/test_meta.pickle
+# for k fold split
+k_fold_meta_path: /data/cwj/data/ACDC/k_fold_meta.pickle
+
+k_fold: 5
+test_proportion: 0.2
+train_mod: split
+val_proportion: 0.3
+
+num_classes: 4
+image_chan: 1

@@ -1,0 +1,12 @@
+[submodule "cfg"]
+	path = cfg
+	url = git@github.com:DSciLab/cfg.git
+[submodule "mlutils"]
+	path = mlutils
+	url = git@github.com:DSciLab/mlutils.git
+[submodule "vox_preprocessing"]
+	path = vox_preprocessing
+	url = git@github.com:DSciLab/vox_preprocessing.git
+[submodule "vox_viz"]
+	path = vox_viz
+	url = git@github.com:DSciLab/vox_viz.git

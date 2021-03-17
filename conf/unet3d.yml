@@ -1,0 +1,29 @@
+import:
+  - ./common
+
+
+epochs: 100
+lr: 0.001
+weight_decay: 1.0e-4
+betas:
+  - 0.9
+  - 0.99
+
+batch_size: 2
+
+least_shape:
+  - 1
+  - 216
+  - 256
+  - 9
+
+input_shape:
+  - 1
+  - 192
+  - 256
+  - 8
+
+pool_kernel_size:
+  - 2
+  - 2
+  - 1

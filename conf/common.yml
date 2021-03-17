@@ -1,0 +1,3 @@
+shuffle: True
+pin_memory: True
+num_worker: 10
