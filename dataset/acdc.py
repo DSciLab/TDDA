@@ -1,6 +1,6 @@
 import torch
 import numpy as np
-from vp import transform as vptf
+from vox import transform as voxtf
 from torch.utils.data.dataset import Dataset
 
 
@@ -11,10 +11,10 @@ class ACDCDataset(Dataset):
         self.train = train
         self.labeled = labeled
         self.data_source = data_source
-        self.transform = vptf.Sequantial([
-            vptf.FixChannels(),
-            vptf.PadAndRandomSampling(opt.least_shape, opt.input_shape),
-            vptf.ToTensor()
+        self.transform = voxtf.Sequantial([
+            voxtf.FixChannels(),
+            voxtf.PadAndRandomSampling(opt.least_shape, opt.input_shape),
+            voxtf.ToTensor()
         ])
         # TODO data transform
         # TODO gt transform

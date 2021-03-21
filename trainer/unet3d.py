@@ -27,7 +27,7 @@ class UNet3DTrainer(BaseTrainer):
         loss = self.loss_fn(logit, gt)
         loss.backward()
         self.optimizer.step()
-        return loss.detach(), logit, gt
+        return loss.detach(), logit.detach(), gt
 
     def eval_step(self, item):
         vol, gt = item
@@ -36,7 +36,7 @@ class UNet3DTrainer(BaseTrainer):
 
         logit = self.net(vol)
         loss = self.loss_fn(logit, gt)
-        return loss.detach(), logit, gt
+        return loss.detach(), logit.detach(), gt
 
     def inference(self, vol):
         logit = self.net(vol)

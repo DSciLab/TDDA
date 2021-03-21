@@ -2,11 +2,14 @@ from torch.utils.data.dataloader import DataLoader
 from dataset import get_dataset
 from trainer import get_trainer
 from mlutils import init
+from mlutils import metrics as mt
 
 
 def train(opt):
     init(opt)
     trainer = get_trainer(opt)
+    trainer.set_metrics(mt.Dice)
+
     for train_dataset, val_dataset in get_dataset(opt):
         train_dataloader = DataLoader(train_dataset,
                                       batch_size=opt.batch_size,

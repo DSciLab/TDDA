@@ -3,7 +3,8 @@ PYTHON              := python
 REQUIREMENTS        := requirements.txt
 CFG_PKG             := cfg
 MLUTILS_PKG         := mlutils
-VP_PKG              := vox_preprocessing
+VOXPY_PKG           := voxpy
+JUNO_PKG            := juno
 MAKE                := make
 LAB_PORT            := 10012
 DASHBOARD_PORT      := 20012
@@ -18,15 +19,19 @@ install_cfg: $(CFG_PKG)
 	$(MAKE) -C $^ install
 
 
+install_juno: $(JUNO_PKG)
+	$(MAKE) -C $^ install
+
+
 install_mlutils: $(MLUTILS_PKG)
 	$(MAKE) -C $^ install
 
 
-install_vp: $(VP_PKG)
+install_voxpy: $(VOXPY_PKG)
 	$(MAKE) -C $^ install
 
 
-install: install_cfg install_mlutils install_vp
+install: install_cfg install_mlutils install_voxpy install_juno
 
 
 dep: $(REQUIREMENTS)
@@ -42,4 +47,4 @@ dashboard:
 
 
 clean:
-	-rm -rf .tox $(CFG_PKG)/.tox $(MLUTILS_PKG)/.tox .ipynb_checkpoints __pycache__
+	-rm -rf ./**/.tox ./**/.ipynb_checkpoints ./**/__pycache__ ./**/build

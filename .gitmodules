@@ -4,9 +4,9 @@
 [submodule "mlutils"]
 	path = mlutils
 	url = git@github.com:DSciLab/mlutils.git
-[submodule "vox_preprocessing"]
-	path = vox_preprocessing
-	url = git@github.com:DSciLab/vox_preprocessing.git
-[submodule "vox_viz"]
-	path = vox_viz
-	url = git@github.com:DSciLab/vox_viz.git
+[submodule "voxpy"]
+	path = voxpy
+	url = git@github.com:DSciLab/voxpy.git
+[submodule "juno"]
+	path = juno
+	url = git@github.com:DSciLab/juno.git
